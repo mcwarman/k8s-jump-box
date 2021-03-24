@@ -26,7 +26,7 @@ connect = %s:%s
 
 echo
 echo "Killing [stunnel]"
-killall stunnel
+killall --quiet stunnel
 
 echo
 echo "Starting [stunnel]"
