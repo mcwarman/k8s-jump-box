@@ -10,6 +10,8 @@ RUN set -eu; \
 ## AWS CLI
 RUN set -eu; \
     apk add --no-cache \
+        groff \
+        less \
         python3 \
         py3-pip; \
     pip3 install --upgrade pip; \

@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## [UNRELEASED]
+
+### Added
+
+- Added packages `groff` and `less` for `aws help` to work
+
 ## 1.0.1 - 2020-03-24
 
 ### Changed
