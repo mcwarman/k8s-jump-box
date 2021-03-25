@@ -7,5 +7,12 @@ packages commonly used to assist.
 ## Usage
 
 ```shell
-kubectl run mcwarman --image=ghcr.io/mcwarman/k8s-jump-box:1 -i -t --image-pull-policy=Always --restart=Never --rm
+kubectl run jump-box --image=ghcr.io/mcwarman/k8s-jump-box:1 -i -t --image-pull-policy=Always --restart=Never --rm
+```
+
+## Testing
+
+```shell
+docker-compose build jumpbox
+docker-compose run jumpbox
 ```
