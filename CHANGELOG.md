@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## [UNRELEASED]
+
+### Changed
+
+- Actually update `stunnel-redis-cli` so `killall` does not expect process
+
 ## 1.0.2 - 2020-03-25
 
 ### Added
