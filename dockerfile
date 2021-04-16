@@ -2,7 +2,7 @@ FROM alpine:3
 
 RUN set -eu; \
     apk add --no-cache \
-        bash vim;
+        bash vim curl;
 
 RUN set -eu; \
     apk add busybox-extras;
