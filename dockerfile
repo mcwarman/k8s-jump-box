@@ -5,7 +5,9 @@ RUN set -eu; \
         bash vim curl;
 
 RUN set -eu; \
-    apk add busybox-extras;
+    apk add \
+      openssl \
+      busybox-extras;
 
 ## AWS CLI
 RUN set -eu; \
