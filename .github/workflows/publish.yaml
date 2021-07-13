@@ -17,13 +17,13 @@ jobs:
 
       - name: Docker meta
         id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v1
+        uses: docker/metadata-action@v3
         with:
-          images: ghcr.io/mcwarman/k8s-jump-box
-          tag-semver: |
-            {{version}}
-            {{major}}.{{minor}}
-            {{major}}
+          images: ghcr.io/${{github.repository}}
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
