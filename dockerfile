@@ -60,7 +60,7 @@ RUN set -eu; \
 COPY ./src/clamdscan-conf.sh /usr/local/bin/clamdscan-conf
 
 RUN set -eu; \
-    chmod +x /usr/local/bin/clamd-conf;
+    chmod +x /usr/local/bin/clamdscan-conf;
 
 RUN rm -rf /var/cache/apk/*
 
