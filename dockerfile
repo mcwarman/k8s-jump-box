@@ -1,6 +1,6 @@
 FROM alpine:3  as redis-cli-builder
 
-ARG REDIS_VERSION="6.2.4"
+ARG REDIS_VERSION="6.2.5"
 ARG REDIS_DOWNLOAD_URL="http://download.redis.io/releases/redis-${REDIS_VERSION}.tar.gz"
 
 RUN set -eu; \
@@ -52,6 +52,15 @@ COPY ./src/stunnel-redis-cli.sh /usr/local/bin/stunnel-redis-cli
 
 RUN set -eu; \
     chmod +x /usr/local/bin/stunnel-redis-cli;
+
+## ClamAV Scan
+RUN set -eu; \
+    apk --no-cache clamav-clamdscan
+
+COPY ./src/clamdscan-conf.sh /usr/local/bin/clamdscan-conf
+
+RUN set -eu; \
+    chmod +x /usr/local/bin/clamd-conf;
 
 RUN rm -rf /var/cache/apk/*
 
