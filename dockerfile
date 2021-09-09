@@ -55,7 +55,7 @@ RUN set -eu; \
 
 ## ClamAV Scan
 RUN set -eu; \
-    apk --no-cache clamav-clamdscan
+    apk --no-cache add clamav-clamdscan
 
 COPY ./src/clamdscan-conf.sh /usr/local/bin/clamdscan-conf
 
