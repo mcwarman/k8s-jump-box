@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## v1.5.0 - UNRELEASED
+
+### Added
+
+- Add `bind-tools`
+
 ## v1.4.1 - 2021-09-10
 
 ### Changed
