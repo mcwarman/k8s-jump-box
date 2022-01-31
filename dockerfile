@@ -20,7 +20,8 @@ RUN set -eu; \
 RUN set -eu; \
     apk add \
       openssl \
-      busybox-extras;
+      busybox-extras \
+      bind-tools;
 
 ## AWS CLI
 RUN set -eu; \
