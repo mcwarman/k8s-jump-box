@@ -11,7 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
-## v1.5.0 - 2021-01-31
+## v1.5.1 - 2022-05-10
+
+### Changed
+
+- `redis-cli` version 6.2.7
+
+## v1.5.0 - 2022-01-31
 
 ### Added
 
