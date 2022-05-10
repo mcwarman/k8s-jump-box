@@ -1,6 +1,6 @@
 FROM alpine:3  as redis-cli-builder
 
-ARG REDIS_VERSION="6.2.5"
+ARG REDIS_VERSION="6.2.7"
 ARG REDIS_DOWNLOAD_URL="http://download.redis.io/releases/redis-${REDIS_VERSION}.tar.gz"
 
 RUN set -eu; \
