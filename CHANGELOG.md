@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## v1.6.0 - 2022-09-10
+
+### Added
+
+- Add `gcloud` and `gke-gcloud-auth-plugin`
+- Add `kubectl`
+
 ## v1.5.1 - 2022-05-10
 
 ### Changed
