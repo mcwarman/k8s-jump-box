@@ -13,6 +13,6 @@ kubectl run jump-box --image=ghcr.io/mcwarman/k8s-jump-box:1 -i -t --image-pull-
 ## Testing
 
 ```shell
-docker-compose build jumpbox
-docker-compose run jumpbox
+docker compose build jumpbox
+docker compose run jumpbox
 ```
