@@ -14,23 +14,17 @@ RUN set -eux; \
 FROM alpine:3
 
 RUN set -eux; \
-  apk add --no-cache \
-  bash vim curl;
+  apk add --no-cache --no-logfile bash vim curl;
 
 RUN set -eux; \
-  apk add \
-  openssl \
-  busybox-extras \
-  bind-tools;
+  apk add --no-cache --no-logfile openssl busybox-extras bind-tools;
 
 RUN set -eux; \
-  apk add --no-cache \
-  python3;
+  apk add --no-cache --no-logfile python3;
 
 ## AWS CLI
 RUN set -eux; \
-  apk add --no-cache \
-  aws-cli \
+  apk add --no-cache --no-logfile aws-cli; \
   aws --version;
 
 ## GCP Cli
@@ -55,18 +49,18 @@ RUN set -eux; \
 
 ## Postgres Client
 RUN set -eux; \
-  apk  --no-cache add postgresql-client
+  apk add --no-cache --no-logfile postgresql-client;
 
 ## Redis Client
 COPY --from=redis-cli-builder  /usr/src/redis/src/redis-cli /usr/local/bin/redis-cli
 
 ## stunnel
 RUN set -eux; \
-  apk  --no-cache add stunnel; \
+  apk  --no-cache --no-logfile add stunnel; \
   mkdir -p /run/stunnel; \
-  chown stunnel.stunnel -R /run/stunnel; \
+  chown stunnel:stunnel -R /run/stunnel; \
   mkdir -p /var/log/stunnel; \
-  chown stunnel.stunnel -R /var/log/stunnel
+  chown stunnel:stunnel -R /var/log/stunnel
 
 COPY ./src/stunnel-redis-cli.sh /usr/local/bin/stunnel-redis-cli
 
@@ -75,14 +69,12 @@ RUN set -eux; \
 
 ## ClamAV Scan
 RUN set -eux; \
-  apk --no-cache add clamav-clamdscan
+  apk --no-cache --no-logfile add clamav-clamdscan
 
 COPY ./src/clamdscan-conf.sh /usr/local/bin/clamdscan-conf
 
 RUN set -eux; \
   chmod +x /usr/local/bin/clamdscan-conf;
-
-RUN rm -rf /var/cache/apk/*
 
 ENV PS1="$ "
 
