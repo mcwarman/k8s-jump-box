@@ -53,3 +53,5 @@ jobs:
           push: ${{ github.event_name == 'release' && github.event.action == 'created' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha
